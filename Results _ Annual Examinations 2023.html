@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results | Annual Examinations 2023</title>
+  <link rel="icon" href="https://portal.fbise.edu.pk/fbise-conduct/result/assets/images/favicon.png" type="image/x-icon">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- App CSS (adjust path if necessary) -->
+  <link rel="stylesheet" href="./Results _ Annual Examinations 2023_files/style.css">
+  <style>
+    /* Custom CSS for form spacing */
+    .form-group {
+      margin-bottom: 20px; /* Adjust as needed */
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid p-0"> 
+    <div class="row m-0">
+      <div class="col-12 p-0">    
+        <div class="login-card">
+          <div>
+            <div>
+              <a class="logo text-start text-center" href="https://portal.fbise.edu.pk/fbise-conduct/result/">
+                <img class="img-fluid for-light" src="./Results _ Annual Examinations 2023_files/FBISE_Islamabad_(logo)1.png" alt="FBISE Logo" width="350">
+                <img class="img-fluid for-dark" src="./Results _ Annual Examinations 2023_files/FBISE_Islamabad_(logo)1.png" alt="FBISE Logo" width="350">
+              </a>
+            </div>
+
+            <div class="login-main">
+              <center><h4>Results of Annual Examinations 2023/2024</h4></center><br>
+              <form method="get" action="https://portal.fbise.edu.pk/fbise-conduct/result/result.php" class="theme-form" onsubmit="return openFile()">
+                <div class="form-group"> 
+                  <label class="col-form-label pt-0">Class</label>
+                  <select class="form-control" name="class" id="class">
+                    <option value="SSC-I-TECH">SSC-I (MATRIC-TECH)</option>
+                    <option value="SSC-II-TECH">SSC-II (MATRIC-TECH)</option>
+                    <option value="HSSC-I-2nd">HSSC-I 2nd Annual</option>
+                    <option value="HSSC-II-2nd">HSSC-II 2nd Annual</option>
+                    <option value="SSC-I-2nd">SSC-I 2nd Annual</option>
+                    <option value="SSC-II-2nd">SSC-II 2nd Annual</option>
+                    <option value="SSC-I">SSC-I</option>
+                    <option value="SSC-II">SSC-II</option>
+                    <option value="HSSC-I">HSSC-I</option>
+                    <option value="HSSC-II">HSSC-II</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="col-form-label pt-0">Roll No#</label>
+                  <input name="rollNo" class="form-control" type="text" id="roll_no" placeholder="Enter Roll Number">
+                </div>
+                <div class="form-group">
+                  <label class="col-form-label pt-0">Student Name</label>
+                  <input name="name" class="form-control" type="text" id='name' placeholder="Enter Student Name">
+                </div>
+                <div class="form-group mb-0 mt-5">
+                  <button type="submit" class="btn btn-primary btn-lg w-100">Search Result</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS (latest compiled and minified) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JavaScript -->
+  <script>
+    function openFile() {
+      var roll_no = document.getElementById('roll_no').value;
+      var correctRollNo = '9028044'; // Replace with your correct roll number
+
+      if (roll_no === correctRollNo) {
+        window.location.href = 'file:///F:/fbise2/www.fbise.edu.pk/test.html'; // Replace with your file path
+        return false; // Prevent form submission
+      } else {
+        alert('Result not found');
+        return false; // Prevent form submission
+      }
+    }
+  </script>
+</body>
+</html>
